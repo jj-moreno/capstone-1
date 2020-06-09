@@ -18,10 +18,12 @@
     2. Planning the Solution
 </h2>
 * Will create a wireframe to envision design view of customer UI for products details view and shopping cart view.
-* The products view will be displayed in a gallery and will need to attach all product information from JSON file.
-* The search by product name will be handled by filtering customer input in a search bar.
-* Customer will have a button by the thumbnail in the products view page to increase quantity as desired for each product.
 * Create JSON data file locally in project directory and allot for a minimum of 10 different product items.
+* The products view will be displayed in a gallery and will need to attach all product information from JSON file.
+* The search by product name will be handled by filtering inventory data by product name from customer input from the text input (search bar).
+* Customer will have a button by the thumbnail in the products view page to increase quantity as desired for each product.
+* Provide Shopping Cart button on products view to send customer to shopping cart view
+* Shopping Cart view will provide summary of order, form for customer information, shipping and purchase confirmation. 
 * Look for images for each product item and save the path to each product item in it's perspective JSON object.
 * Increase search functionality by a filtering navigation bar which allows for filter by price, manufactorer and category
 * Error handling will be used in the form from shopping cart view when asking for customer information input to finalize customer order
