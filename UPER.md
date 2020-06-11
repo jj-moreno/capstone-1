@@ -30,22 +30,21 @@
 <h2>
     3. Executing the Plan
 </h2>
-*
-*
-*
-*
-*
-*
-*
-*
+* Started with building out the header, starter code had flexbox for the header, I made sure to use a different flexbox configuration for the other sections.
+* Built navigation bar and used new flexbox configuration.
+* Imported data from json file in local storage and created gallery for products page using flexbox.
+* Built a 'Add to Cart' button on each product.
+* Created standard button for my cart in the nav bar with my search input field and button.
+* After replacing cart button with clickable cart icon, I quickly added a span which would be a count label for the amount of items selected by consumer.
+* Implemented my global state using React Hooks and Context to keep track of my products and items in cart, followed with using global state. 
+* Used global state to render my products and to keep the counter in my cart icon label to reflect number of items purchased.
+* Made quantity in products UI and cart UI update with every click on 'Add to Cart' button and this was made possible through Amir office hours 
 <h2>
     4. Reflection / Refactor
 </h2>
-*
-*
-*
-*
-*
-*
-*
-*
+* Realized that my header needed a better naming because I started naming it inventory and chose e-commerce as a better title after implementation of 'Add to Cart' button.
+* Found out that I can make a cart icon without a 3rd party styling library and now need to make the cart icon clickable and use react router to send customer to cart page.
+* Didn't think about Add to Cart button when visualizing my products page gallery, added it to each product but will need to update cart with each click.
+* Did not like standard button for cart and researched how to make a cart icon and implemented the icon in my nav bar, made it clickable, and removed previous cart button. 
+* At the point of implementing my nice cart icon with span label for items counts, at this moment I realize I need a global state and looked into Redux principles using React Hooks and Context.
+* Final reflection is that global state is very important when using React as you can navigate through pages and maintain your data.

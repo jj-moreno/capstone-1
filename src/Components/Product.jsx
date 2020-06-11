@@ -1,12 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-export default function Product() {
-  const [idVal, setIdVal] = React.useState(49999);
+export default function Product(props) {
   return (
-    <div class='Product'>
-      <Link to={`/cart/${idVal}`}>To Shopping Cart</Link>
-      <p>This is the Product Component</p>
+    <div className='product-box' key='products.id'>
+      <img src={props.product.image} alt={props.product.name} />
+      <div>Name: {props.product.name}</div>
+      <div>Product #: {props.product.number} </div>
+      <div className='product-price'>
+        Price: ${props.product.price.toFixed(2)}
+      </div>
+      <div>Quantity: {props.product.quantity}</div>
+      <button
+        id='add-to-cart-btn'
+        type='button'
+        onClick={() => {
+          props.addToCart(props.product, props.index);
+          document.getElementById('lblCartCount').scrollIntoView(false);
+        }}
+      >
+        Add to Cart
+      </button>
     </div>
   );
 }
