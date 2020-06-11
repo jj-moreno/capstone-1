@@ -16,6 +16,7 @@ const StoreState = (props) => {
     dispatch({ type: 'ADD_TO_CART', payload: product });
   };
 
+  // Update Product Quantity
   const updateProductQuantity = (product) => {
     dispatch({ type: 'UPDATE_PRODUCT', payload: product });
   };
