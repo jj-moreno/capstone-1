@@ -1,0 +1,283 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 2vmin);
+  color: white;
+  padding: 0.5rem;
+}
+
+.App-header * {
+  margin: 0;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#nav-bar {
+  align-items: center;
+  background: white;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.5rem;
+  top: 0;
+  font-size: calc(16px + 2vmin);
+}
+
+#search-input {
+  width: 40%;
+  font-size: calc(16px + 2vmin);
+  margin-right: 2px;
+  outline: none;
+  border: none;
+  color: #282c34;
+  align-self: stretch;
+  border: gray 1px solid;
+}
+#search-input:hover::-webkit-input-placeholder {
+  color: black;
+}
+/* CREDIT TO PRANAV'S SOLUTION FROM STACKOVERFLOW  
+    https://stackoverflow.com/questions/13183421/how-to-change-placeholder-color-on-focus*/
+#search-input:focus::-webkit-input-placeholder {
+  color: black;
+}
+
+/* Firefox < 19 */
+#search-input:-moz-placeholder {
+  color: black;
+}
+#search-input:focus:-moz-placeholder {
+  color: black;
+}
+
+/* Firefox > 19 */
+#search-input::-moz-placeholder {
+  color: black;
+}
+#search-input:focus::-moz-placeholder {
+  color: black;
+}
+
+/* Internet Explorer 10 */
+#search-input:-ms-input-placeholder {
+  color: black;
+}
+#search-input:focus:-ms-input-placeholder {
+  color: black;
+}
+
+#search-btn {
+  background-color: #000;
+  color: #fff;
+  font-size: calc(10px + 2vmin);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  align-self: stretch;
+}
+
+#search-btn:hover {
+  background-color: #282c34;
+}
+
+button:hover {
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+}
+
+#cart-btn {
+  background-color: floralwhite;
+  font-size: calc(12px + 2vmin);
+  justify-content: flex-end;
+  padding: 0 20px;
+  outline: thin;
+  cursor: pointer;
+  align-self: stretch;
+}
+
+#cart-link {
+  /* The line below pushes my cart button along with the icon to the right, CREDIT TO MDN Web Docs  
+      https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container*/
+  margin-left: auto;
+}
+
+/* CREDIT FOR ICON CART GOES TO Marty  from following CODEPEN https://codepen.io/okra/pen/Ekyaz*/
+.icon-cart {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  overflow: hidden;
+  margin-left: 20px;
+  margin-bottom: 2px;
+  justify-self: flex-end;
+}
+
+.icon-cart .cart-line-1 {
+  width: 15%;
+  height: 7%;
+  position: absolute;
+  left: 8%;
+  top: 25%;
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+  background-color: #000;
+  border-bottom-left-radius: 35%;
+}
+
+.icon-cart .cart-line-2 {
+  width: 35%;
+  height: 7%;
+  position: absolute;
+  left: 6%;
+  top: 40%;
+  -webkit-transform: rotate(80deg);
+  -moz-transform: rotate(80deg);
+  -ms-transform: rotate(80deg);
+  transform: rotate(80deg);
+  background-color: #000;
+}
+
+.icon-cart .cart-line-2:before {
+  content: '';
+  width: 120%;
+  height: 100%;
+  position: absolute;
+  left: 45%;
+  top: -280%;
+  -webkit-transform: rotate(-80deg);
+  -moz-transform: rotate(-80deg);
+  -ms-transform: rotate(-80deg);
+  transform: rotate(-80deg);
+  background-color: inherit;
+}
+
+.icon-cart .cart-line-2:after {
+  content: '';
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  left: 59%;
+  top: -670%;
+  background-color: inherit;
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 25%;
+}
+
+.icon-cart .cart-line-3 {
+  width: 30%;
+  height: 7%;
+  position: absolute;
+  left: 33%;
+  top: 45%;
+  background-color: #000;
+}
+
+.icon-cart .cart-line-3:after {
+  content: '';
+  width: 124%;
+  height: 100%;
+  position: absolute;
+  top: -150%;
+  left: -5%;
+  background-color: inherit;
+}
+
+.icon-cart .cart-wheel {
+  width: 12%;
+  height: 12%;
+  background-color: #000;
+  border-radius: 100%;
+  position: absolute;
+  left: 28%;
+  bottom: 20%;
+}
+
+.icon-cart .cart-wheel:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 100%;
+  position: absolute;
+  left: 200%;
+  bottom: 0;
+}
+
+.icon-cart:hover {
+  background-color: lightgray;
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+}
+
+/* CREDIT FOR 'lblCartCount' GOES TO Unknown from following JSFIDDLE 
+        http://jsfiddle.net/LhrLe0j6/1/ */
+#lblCartCount {
+  border-radius: 5px;
+  font-size: 12px;
+  background: #ff0000;
+  color: #fff;
+  padding: 0 5px;
+  vertical-align: top;
+  float: right;
+}
+
+#product-ctnr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 1555px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+/* CREDIT FOR PRODUCT GALLERY STANDARD SIZE TO ADAM FROM STACKOVERFLOW 
+    https://stackoverflow.com/questions/28568779/why-do-flexbox-item-images-resize-differently-according-to-their-initial-size */
+.product-box {
+  flex: 1;
+  border: #282c34 1px solid;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+.product-price {
+  color: #ff0000;
+}
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 1555px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.cart-box {
+  flex: 1;
+  border: #282c34 1px solid;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
