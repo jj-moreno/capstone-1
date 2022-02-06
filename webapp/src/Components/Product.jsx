@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Product(props) {
+
+  const [product] = useState(props.product);
+
+
   return (
-    <div className='product-box' key='products.id'>
-      <img src={props.product.image} alt={props.product.name} />
-      <div>Name: {props.product.name}</div>
-      <div>Product #: {props.product.number} </div>
+    <div className='product-box' key={product.id}>
+      <img src={product.image} alt={product.name} />
+      <div>Name: {product.name}</div>
+      <div>Product #: {product.number} </div>
       <div className='product-price'>
-        Price: ${props.product.price.toFixed(2)}
+        Price: ${product.price}
       </div>
-      <div>Quantity: {props.product.quantity}</div>
+      <div>Quantity: {product.quantity}</div>
       <button
         id='add-to-cart-btn'
         type='button'
